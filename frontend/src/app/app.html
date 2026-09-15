@@ -18,7 +18,20 @@
 
 <table *ngIf="!carregando && motores.length">
   <thead>
-    <tr><th>Código</th><th>Modelo</th><th>Fabricante</th><th>CV</th><th>RPM</th><th></th></tr>
+    <tr>
+      <th>Código</th>
+      <th>Modelo</th>
+      <th>Fabricante</th>
+      <th>CV</th>
+      <th>Tensão</th>
+      <th>Hz</th>
+      <th>Polos</th>
+      <th>RPM</th>
+      <th>Carcaça</th>
+      <th>Grau proteção</th>
+      <th>Preço</th>
+      <th></th>
+    </tr>
   </thead>
   <tbody>
     <tr *ngFor="let m of motores">
@@ -26,7 +39,13 @@
       <td>{{ m.modelo }}</td>
       <td>{{ nomeFabricante(m.fabricante_id) }}</td>
       <td>{{ m.potencia_cv }}</td>
+      <td>{{ m.tensao }}</td>
+      <td>{{ m.frequencia_hz }}</td>
+      <td>{{ m.polos }}</td>
       <td>{{ m.rotacao_rpm }}</td>
+      <td>{{ m.carcaca || '—' }}</td>
+      <td>{{ m.grau_protecao || '—' }}</td>
+      <td>{{ m.preco ? (m.preco | number:'1.2-2') : '—' }}</td>
       <td>
         <button (click)="editar(m)">Editar</button>
         <button (click)="excluir(m)">Excluir</button>

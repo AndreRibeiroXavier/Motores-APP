@@ -9,6 +9,7 @@ import { MotorService, Motor, Fabricante } from './motor.service';
   standalone: true,
   imports: [CommonModule, FormsModule, ReactiveFormsModule],
   templateUrl: './app.html',
+  styleUrl: './app.css',
 })
 export class App implements OnInit {
   motores: Motor[] = [];
