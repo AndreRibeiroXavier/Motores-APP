@@ -31,7 +31,3 @@ Virtualização/Docker Desktop: o ambiente não tinha a virtualização habilita
   na BIOS de início, o que travou a subida dos containers antes mesmo do projeto
   começar de verdade.
 
-CLONE AQUI 
-git clone https://github.com/AndreRibeiroXavier/Motores-APP
-cd Motores-APP
-docker compose up -d --build
